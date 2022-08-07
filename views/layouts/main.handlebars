@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+        <h1>
+            <a href="/" class="home-title">The Tech Blog</a>
+        </h1>
+        <nav>
+            {{#if loggedIn}}
+            <a href="/dashboard" class="nav-title">dashboard</a>
+            <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+            <a href="/login" class="nav-title">Login</a>
+            <a href="/" class="nav-title">Home</a>
+            <a href="/dashboard" class="nav-title">Dashboard</a>
+            {{/if}}
+        </nav>
+        </header>
+        <main>
+        {{{ body }}}
+        </main>
+        <footer>
+            <p>Thanks for visiting!</p> 
+            <p class="foot-note-2"> &copy; 2022, Leman102</p> 
+        </footer>
+    </div>
+</body>
+
+</html>
