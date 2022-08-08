@@ -1,0 +1,24 @@
+<article >
+    <!--Use partial ">"-->
+    {{> post-info post}}
+</article>
+
+<!--take the loggedIn var from home-routes.js => .get('/post/:id')-->
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="btn-comment-form">Add Comment 📝</button>
+  </div>
+</form>
+{{/if}}
+
+<!--add partial for comments-->
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

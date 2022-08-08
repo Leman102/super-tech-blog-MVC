@@ -68,7 +68,7 @@ textarea:focus, input:focus {
 
 textarea {
     min-width: 40%;
-    min-height: 100px;
+    min-height: 70px;
 }
 
 form > div {
@@ -79,8 +79,8 @@ form label {
     display: block;
 }
 
-.login-form, .signup-form {
-    margin: auto 20%;
+.login-form, .signup-form, .comment-form {
+    margin: 2% 20%;
     align-content: center;
     padding: 10px;
     font-weight: bold;
@@ -188,7 +188,9 @@ span {
 .meta {
     padding: 10px;
 }
-
+.text {
+    padding: 5px 12px;
+}
 .comment-counter{
     background-color: rgb(237, 233, 233);
     font-size: 90%;
@@ -199,17 +201,19 @@ span {
     margin: -1.5% 0 2% 0;
 }
 
-.comment-form {
-    margin-bottom: 5%;
-}
 
 .comment {
     padding: 1%;
     margin-bottom: 1%;
+    border-radius: 10px;
 }
 
 .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: white;
+
+}
+.comment:nth-child(even) {
+    border: 1px rgb(180, 180, 180) dashed;
 }
 
 .comment .meta {
