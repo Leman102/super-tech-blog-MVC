@@ -5,13 +5,13 @@
             <div class="title">
                 <div class="title-post">
                     <h1>{{title}}</h1>
-                    <span>Post by {{user.username}} on {{created_at}}<span>
+                    <span>Post by <b>{{user.username}}</b> on {{format_date created_at}}<span>
                 </div>
             </div>
             <div class="meta">
                 {{post_content}}
                 <br>
-                <a href="/post/{{id}}" class="comment-counter">Comment(s) {{comments.length}}</a>
+                <a href="/post/{{id}}" class="comment-counter">{{format_plural 'Comment' comments.length}} {{comments.length}}</a>
             </div>
         </article>
     </li>
