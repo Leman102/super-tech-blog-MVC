@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     //if login redirect to a specific page
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('/dashboard');
         return;
     }
     res.render('login');

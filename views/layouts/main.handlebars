@@ -18,12 +18,12 @@
         </h1>
         <nav>
             {{#if loggedIn}}
-            <a href="/dashboard" class="nav-title">dashboard</a>
+            <a href="/dashboard" class="nav-title">Dashboard</a>
+            <a href="/" class="nav-title">Home</a>
             <button id="logout" class="btn-no-style">Logout</button>
             {{else}}
             <a href="/login" class="nav-title">Login</a>
             <a href="/" class="nav-title">Home</a>
-            <a href="/dashboard" class="nav-title">Dashboard</a>
             {{/if}}
         </nav>
         </header>
