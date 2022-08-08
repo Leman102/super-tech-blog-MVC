@@ -34,18 +34,19 @@ a:hover {
     color: black;
 }
 button {
-    background-color: #225ca3;
+    background-color: rgb(222, 247, 222);
     border: 0;
     padding: 1%;
-    color: white;
+    color: black;
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 1%;
 }
 
 button:hover {
-    background-color: #3486eb;
+    background-color: rgb(114, 215, 246);
 }
 
 .post-list {
@@ -78,6 +79,27 @@ form label {
     display: block;
 }
 
+.login-form, .signup-form {
+    margin: auto 20%;
+    align-content: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #000000ba;
+    color: rgb(200, 206, 200);
+    border-radius: 10px;
+
+}
+.login-form{
+    margin-bottom: 3%;
+}
+
+textarea, input{
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
 .wrapper {
     width: 100%;
     min-height: 100%;
@@ -86,7 +108,7 @@ form label {
     flex-direction: column;
 }
 
-header {
+header{
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
@@ -116,11 +138,12 @@ main {
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(187, 246, 187);
+    color: rgb(222, 247, 222);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
+    font-family: "Staatliches", sans-serif;
 }
 
 .btn-no-style:hover {

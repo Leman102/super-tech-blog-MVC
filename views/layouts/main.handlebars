@@ -19,7 +19,7 @@
         <nav>
             {{#if loggedIn}}
             <a href="/dashboard" class="nav-title">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
+            <button id="logout" class="btn-no-style">Logout</button>
             {{else}}
             <a href="/login" class="nav-title">Login</a>
             <a href="/" class="nav-title">Home</a>
@@ -35,6 +35,9 @@
             <p class="foot-note-2"> &copy; 2022, Leman102</p> 
         </footer>
     </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

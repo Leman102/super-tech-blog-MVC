@@ -3,13 +3,12 @@ const sequelize = require('./config/connection');
 const path = require('path');
 const routes = require('./controllers');
 //import helper function
-//const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
+//use express-session and connect-session-sequelize
+const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-//use express-session and connect-session-sequelize
-const session = require('express-session');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -37,7 +36,7 @@ app.use(routes);
 //set up handlebars.js as thr spp's template engine of choice
 const exphbs = require('express-handlebars');
 //pass helpers
-const hbs = exphbs.create({  });//helpers
+const hbs = exphbs.create({ helpers });//helpers
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

@@ -79,7 +79,7 @@ router.post('/',  (req, res) => {
 
 //POST login route
 router.post('/login',  (req, res) => {
-    //expects {email"leman@email.com", password:abc1234}
+    //expects {email"leman@email.com", password:leman1234}
     User.findOne({
         where: {
             email: req.body.email
@@ -104,6 +104,10 @@ router.post('/login',  (req, res) => {
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     });
 });
 
